@@ -1,0 +1,177 @@
+@charset "UTF-8";
+
+/* 共通部分 */
+html {
+    font-size: 100%;
+}
+body {
+    font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
+    line-height: 1.7;
+    color: #432;
+}
+img {
+    max-width: 100%;
+}
+
+/* レイアウト */
+.cover {
+    height: 400px;
+}
+
+/* フォント */
+.font-title {
+    font-family: "Limelight", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.font-english {
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+.font-japanese {
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/* タイトル */
+.page-title,
+.heading-medium,
+.heading-small {
+    text-align: center;
+}
+.page-title {
+    font-size: 3rem;
+    margin-top: 10rem;
+    line-height: 1.4;
+}
+.heading-medium {
+    font-size: 2.5rem;
+}
+.heading-small {
+    font-size: 1.5rem;
+}
+
+/* Profile */
+.profile-thumbnail {
+    display: block;
+    border-radius: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 1.5rem;
+}
+.profile p {
+    text-align: center;
+    margin-top: -.5rem;
+    padding: 0 1.5rem;
+}
+
+/* History, Skills, Qualifications */
+.history-info,
+.qualifications-info {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1.5rem;
+    border-spacing: 0;
+}
+.history-info th,
+.history-info td,
+.qualifications-info th,
+.qualifications-info td {
+    border-bottom: 1px solid #c9c2bc;
+}
+.history-info th, 
+.qualifications-info th {
+    text-align: left;
+    font-weight: normal;
+    padding: 1rem;
+}
+.history-info td, 
+.qualifications-info td {
+    padding: 1rem 0;
+}
+.history .heading-medium,
+.skills .heading-medium,
+.qualifications .heading-medium {
+    margin-top: 10rem;
+}
+.skills p,
+.qualifications p {
+    text-align: center;
+    margin-top: -.5rem;
+    font-size: 0.9rem;
+}
+.skills p {
+    margin-bottom: 1.5rem;
+}
+.qualifications p {
+    margin-bottom: 1rem;
+}
+.skills-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: .5rem;
+    list-style: none;
+    padding: 0 1.5rem;
+}
+.skill-item {
+    color: #432;
+    background-color: #d9f3f2;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: .2rem .4rem;
+}
+
+/* フッター */
+.page-footer {
+    padding-top: 12rem;
+}
+.copyright {
+    background-color: #432;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 6rem;
+    color: #fff;
+}
+
+/* デスクトップ版
+--------------------------------------- */
+@media (min-width: 800px) {
+    /* タイトル */
+    .page-title {
+        font-size: 5rem;
+    }
+    .heading-medium {
+        font-size: 3.5rem;
+    }
+    .heading-small {
+        font-size: 2rem;
+    }
+
+    /* Profile */
+    .profile p {
+        font-size: 1.15rem;
+    }
+
+    /* Skills, Qualifications */
+    .skills p,
+    .qualifications p {
+        margin-top: -1rem;
+        margin-bottom: 2rem;
+        font-size: 1rem;
+    }
+    .skill-item {
+        font-size: 1.6rem;
+    }
+
+    /* フッター */
+    .page-footer {
+        padding-top: 12rem;
+    }
+}
