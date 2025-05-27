@@ -17,15 +17,47 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
 
+        <!--Google Material Icons-->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+
         <!--オリジナルCSS-->
         <link rel="stylesheet" href="css/style.css">
+        <script src="js/script.js" defer></script>
     </head>
 
     <body>
         <div class="cover">
+            <nav>
+                <button id="menu-open" class="btn-menu">
+                    <span class="material-symbols-outlined icon-btn">menu_open</span>
+                    <title>メニューを開く</title>
+                </button>
+                <div id="menu-panel">
+                    <button id="menu-close" class="btn-menu">
+                        <span class="material-symbols-outlined icon-btn">close</span>
+                        <title>メニューを閉じる</title>
+                    </button>
+                    <ul class="menu-list">
+                        <li>
+                            <button id="dark-light-btn">
+                                <span class="material-symbols-outlined">contrast</span>
+                                <div id="dark-light-text" class="font-english">Dark Mode</div>
+                            </button>
+                        </li>
+                        <li>
+                            <a href="menu.html">githubのリンク</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <h1 class="page-title font-title">Ryota Nakae</h1>
             <h5 class="heading-small font-english">Hello! I am an IT consultant working in Tokyo.</h5>
-        </div>
+        </div>    
+
+        <!-- <div class="cover"> -->
+            <!-- <h1 class="page-title font-title">Ryota Nakae</h1>
+            <h5 class="heading-small font-english">Hello! I am an IT consultant working in Tokyo.</h5> -->
+        <!-- </div> -->
 
         <section class="profile">
             <h3 class="heading-medium font-english">Profile</h3>

@@ -1,5 +1,12 @@
 @charset "UTF-8";
 
+:root {
+    --light-green: #d5edeb;
+    --light-blue: #d9f3f2;
+    --brown: #403632;
+    --black: #432;
+}
+
 /* 共通部分 */
 html {
     font-size: 100%;
@@ -7,15 +14,26 @@ html {
 body {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
     line-height: 1.7;
-    color: #432;
+    color: var(--black);
 }
 img {
     max-width: 100%;
 }
 
 /* レイアウト */
-.cover {
+/* .cover {
     height: 400px;
+} */
+.wrapper {
+    max-width: 1120px;
+    margin: auto;
+    padding: 0 1.5rem;
+}
+.main-nav {
+    display: flex;
+    justify-content: flex-end;
+    gap: 2rem;
+    list-style: none;
 }
 
 /* フォント */
@@ -37,6 +55,53 @@ img {
     font-style: normal;
 }
 
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 4;
+    padding: 1rem 1rem;
+    border: 1px solid #6e6864;
+    border-radius: 20%;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+}
+/* アイコンボタン */
+.icon-btn {
+    font-size: 32px;
+}
+
+/* 閉じるボタン */
+#menu-close {
+    border: 1px solid var(--black);
+}
+/* #menu-close svg {
+    fill: var(--light-green);
+} */
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 5rem 2rem 2rem;
+    width: max(32vw, 16rem);
+    height: 100vh;
+    background-color: #c9c2bc;
+    box-shadow: 0 0 2rem var(--light-blue);
+    translate: 100vw;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    margin: 1.5rem 0;
+}
+.menu-list a {
+    color: var(--light-green);
+}
+
 /* タイトル */
 .page-title,
 .heading-medium,
@@ -50,6 +115,7 @@ img {
 }
 .heading-medium {
     font-size: 2.5rem;
+    margin-top: 10rem;
 }
 .heading-small {
     font-size: 1.5rem;
@@ -120,8 +186,8 @@ img {
     padding: 0 1.5rem;
 }
 .skill-item {
-    color: #432;
-    background-color: #d9f3f2;
+    color: var(--black);
+    background-color: var(--light-blue);
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: 500;
@@ -133,11 +199,20 @@ img {
     padding-top: 12rem;
 }
 .copyright {
-    background-color: #432;
+    background-color: var(--black);
     text-align: center;
     padding: 2rem 0;
     margin-top: 6rem;
     color: #fff;
+}
+
+.dark-theme {
+    background: #000;
+    color: #ddd;
+}
+#dark-light-btn {
+    display: flex;
+    gap: 0.2rem;
 }
 
 /* デスクトップ版
