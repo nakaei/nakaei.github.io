@@ -1,24 +1,33 @@
 @charset "UTF-8";
 
-/* 共通部分 */
+/*
+VARIABLES
+================================================ */
+:root {
+    --light-green: #d5edeb;
+    --light-blue: #d9f3f2;
+    --brown: #403632;
+    --black: #432;
+}
+
+/*
+COMMON
+================================================ */
 html {
     font-size: 100%;
 }
 body {
     font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "BIZ UDPGothic", sans-serif;
     line-height: 1.7;
-    color: #432;
+    color: var(--black);
 }
 img {
     max-width: 100%;
 }
 
-/* レイアウト */
-.cover {
-    height: 400px;
-}
-
-/* フォント */
+/*
+FONT
+================================================ */
 .font-title {
     font-family: "Limelight", sans-serif;
     font-weight: 400;
@@ -37,7 +46,9 @@ img {
     font-style: normal;
 }
 
-/* タイトル */
+/*
+TITLE
+================================================ */
 .page-title,
 .heading-medium,
 .heading-small {
@@ -50,12 +61,71 @@ img {
 }
 .heading-medium {
     font-size: 2.5rem;
+    margin-top: 10rem;
 }
 .heading-small {
     font-size: 1.5rem;
 }
 
-/* Profile */
+/*
+SLIDE MENU
+================================================ */
+/* 開閉ボタン */
+.btn-menu {
+    position: fixed;
+    right: 1rem;
+    top: 1rem;
+    z-index: 4;
+    padding: 1rem 1rem;
+    border: 1px solid #6e6864;
+    border-radius: 20%;
+    height: 4rem;
+    width: 4rem;
+    transition: .4s;
+}
+/* アイコンボタン */
+.icon-btn {
+    font-size: 32px;
+}
+/* 閉じるボタン */
+#menu-close {
+    border: 1px solid var(--black);
+}
+
+#menu-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 4;
+    padding: 5rem 2rem 2rem;
+    width: max(32vw, 16rem);
+    height: 100vh;
+    background-color: #c9c2bc;
+    box-shadow: 0 0 2rem var(--light-blue);
+    translate: 100vw;
+}
+.menu-list {
+    list-style: none;
+}
+.menu-list li {
+    margin: 1.5rem 0;
+}
+.menu-list a {
+    color: #000000;
+    text-decoration: none;
+}
+.git-link {
+    display: flex;
+    gap: 0.4rem
+}
+#git-link-btn {
+    display: flex;
+    gap: 0.2rem;
+}
+
+/*
+PROFILE
+================================================ */
 .profile-thumbnail {
     display: block;
     border-radius: 60px;
@@ -69,7 +139,9 @@ img {
     padding: 0 1.5rem;
 }
 
-/* History, Skills, Qualifications */
+/*
+HISTORY, SKILLS, QUALIFICATIONS
+================================================ */
 .history-info,
 .qualifications-info {
     width: 100%;
@@ -120,30 +192,42 @@ img {
     padding: 0 1.5rem;
 }
 .skill-item {
-    color: #432;
-    background-color: #d9f3f2;
+    color: var(--black);
+    background-color: var(--light-blue);
     border-radius: 8px;
     font-size: 1.2rem;
     font-weight: 500;
     padding: .2rem .4rem;
 }
 
-/* フッター */
+/*
+FOOTER
+================================================ */
 .page-footer {
     padding-top: 12rem;
 }
 .copyright {
-    background-color: #432;
     text-align: center;
     padding: 2rem 0;
     margin-top: 6rem;
-    color: #fff;
 }
 
-/* デスクトップ版
---------------------------------------- */
+/*
+DARK THEME
+================================================ */
+.dark-theme {
+    background: #000;
+    color: #ddd;
+}
+#dark-light-btn {
+    display: flex;
+    gap: 0.2rem;
+}
+
+/*
+DESK TOP VERSION
+================================================ */
 @media (min-width: 800px) {
-    /* タイトル */
     .page-title {
         font-size: 5rem;
     }
@@ -154,12 +238,10 @@ img {
         font-size: 2rem;
     }
 
-    /* Profile */
     .profile p {
         font-size: 1.15rem;
     }
 
-    /* Skills, Qualifications */
     .skills p,
     .qualifications p {
         margin-top: -1rem;
@@ -170,7 +252,6 @@ img {
         font-size: 1.6rem;
     }
 
-    /* フッター */
     .page-footer {
         padding-top: 12rem;
     }
