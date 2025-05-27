@@ -1,5 +1,8 @@
 @charset "UTF-8";
 
+/*
+VARIABLES
+================================================ */
 :root {
     --light-green: #d5edeb;
     --light-blue: #d9f3f2;
@@ -7,7 +10,9 @@
     --black: #432;
 }
 
-/* 共通部分 */
+/*
+COMMON
+================================================ */
 html {
     font-size: 100%;
 }
@@ -20,23 +25,9 @@ img {
     max-width: 100%;
 }
 
-/* レイアウト */
-/* .cover {
-    height: 400px;
-} */
-.wrapper {
-    max-width: 1120px;
-    margin: auto;
-    padding: 0 1.5rem;
-}
-.main-nav {
-    display: flex;
-    justify-content: flex-end;
-    gap: 2rem;
-    list-style: none;
-}
-
-/* フォント */
+/*
+FONT
+================================================ */
 .font-title {
     font-family: "Limelight", sans-serif;
     font-weight: 400;
@@ -55,6 +46,30 @@ img {
     font-style: normal;
 }
 
+/*
+TITLE
+================================================ */
+.page-title,
+.heading-medium,
+.heading-small {
+    text-align: center;
+}
+.page-title {
+    font-size: 3rem;
+    margin-top: 10rem;
+    line-height: 1.4;
+}
+.heading-medium {
+    font-size: 2.5rem;
+    margin-top: 10rem;
+}
+.heading-small {
+    font-size: 1.5rem;
+}
+
+/*
+SLIDE MENU
+================================================ */
 /* 開閉ボタン */
 .btn-menu {
     position: fixed;
@@ -72,14 +87,11 @@ img {
 .icon-btn {
     font-size: 32px;
 }
-
 /* 閉じるボタン */
 #menu-close {
     border: 1px solid var(--black);
 }
-/* #menu-close svg {
-    fill: var(--light-green);
-} */
+
 #menu-panel {
     position: fixed;
     top: 0;
@@ -99,29 +111,21 @@ img {
     margin: 1.5rem 0;
 }
 .menu-list a {
-    color: var(--light-green);
+    color: #000000;
+    text-decoration: none;
+}
+.git-link {
+    display: flex;
+    gap: 0.4rem
+}
+#git-link-btn {
+    display: flex;
+    gap: 0.2rem;
 }
 
-/* タイトル */
-.page-title,
-.heading-medium,
-.heading-small {
-    text-align: center;
-}
-.page-title {
-    font-size: 3rem;
-    margin-top: 10rem;
-    line-height: 1.4;
-}
-.heading-medium {
-    font-size: 2.5rem;
-    margin-top: 10rem;
-}
-.heading-small {
-    font-size: 1.5rem;
-}
-
-/* Profile */
+/*
+PROFILE
+================================================ */
 .profile-thumbnail {
     display: block;
     border-radius: 60px;
@@ -135,7 +139,9 @@ img {
     padding: 0 1.5rem;
 }
 
-/* History, Skills, Qualifications */
+/*
+HISTORY, SKILLS, QUALIFICATIONS
+================================================ */
 .history-info,
 .qualifications-info {
     width: 100%;
@@ -194,18 +200,21 @@ img {
     padding: .2rem .4rem;
 }
 
-/* フッター */
+/*
+FOOTER
+================================================ */
 .page-footer {
     padding-top: 12rem;
 }
 .copyright {
-    background-color: var(--black);
     text-align: center;
     padding: 2rem 0;
     margin-top: 6rem;
-    color: #fff;
 }
 
+/*
+DARK THEME
+================================================ */
 .dark-theme {
     background: #000;
     color: #ddd;
@@ -215,10 +224,10 @@ img {
     gap: 0.2rem;
 }
 
-/* デスクトップ版
---------------------------------------- */
+/*
+DESK TOP VERSION
+================================================ */
 @media (min-width: 800px) {
-    /* タイトル */
     .page-title {
         font-size: 5rem;
     }
@@ -229,12 +238,10 @@ img {
         font-size: 2rem;
     }
 
-    /* Profile */
     .profile p {
         font-size: 1.15rem;
     }
 
-    /* Skills, Qualifications */
     .skills p,
     .qualifications p {
         margin-top: -1rem;
@@ -245,7 +252,6 @@ img {
         font-size: 1.6rem;
     }
 
-    /* フッター */
     .page-footer {
         padding-top: 12rem;
     }

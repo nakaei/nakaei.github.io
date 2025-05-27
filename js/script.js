@@ -1,7 +1,9 @@
+/*
+ライトモード↔︎ダークモード切替時の動作
+================================================ */
 const darkLightBtn = document.querySelector('#dark-light-btn');
 const darkLightText = document.querySelector('#dark-light-text');
 const menuOpen = document.querySelector('#menu-open');
-const menuPanel = document.querySelector('#menu-panel');
 
 darkLightBtn.addEventListener('click', () => {
     // 全要素のテーマを変更
@@ -18,7 +20,11 @@ darkLightBtn.addEventListener('click', () => {
     menuOpen.classList.toggle('dark-theme');
 })
 
+/*
+メニューパネル開閉時の動作
+================================================ */
 const menuClose = document.querySelector('#menu-close');
+const menuPanel = document.querySelector('#menu-panel');
 const menuOptions = {
     duration: 1400,
     easing: 'ease',
