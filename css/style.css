@@ -95,6 +95,7 @@ SLIDE MENU
 /* 閉じるアイコン */
 .close-icon {
     font-size: 32px;
+    color: var(--black);
 }
 
 #menu-panel {
