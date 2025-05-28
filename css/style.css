@@ -6,8 +6,8 @@ VARIABLES
 :root {
     --light-green: #d5edeb;
     --light-blue: #d9f3f2;
-    --brown: #403632;
     --black: #000;
+    --grey: #8b8785;
 }
 
 /*
@@ -77,20 +77,24 @@ SLIDE MENU
     top: 1rem;
     z-index: 4;
     padding: 1rem 1rem;
-    border: 1px solid #6e6864;
+    border: 1px solid var(--grey);
     border-radius: 20%;
     height: 4rem;
     width: 4rem;
     transition: .4s;
 }
-/* アイコンボタン */
-.icon-btn {
+/* メニューアイコン */
+.menu-icon {
     font-size: 32px;
-    color: var(--black);
+    color: var(--grey);
 }
 /* 閉じるボタン */
 #menu-close {
     border: 1px solid var(--black);
+}
+/* 閉じるアイコン */
+.close-icon {
+    font-size: 32px;
 }
 
 #menu-panel {
