@@ -7,7 +7,7 @@ VARIABLES
     --light-green: #d5edeb;
     --light-blue: #d9f3f2;
     --brown: #403632;
-    --black: #432;
+    --black: #000;
 }
 
 /*
@@ -86,6 +86,7 @@ SLIDE MENU
 /* アイコンボタン */
 .icon-btn {
     font-size: 32px;
+    color: var(--black);
 }
 /* 閉じるボタン */
 #menu-close {
@@ -111,7 +112,7 @@ SLIDE MENU
     margin: 1.5rem 0;
 }
 .menu-list a {
-    color: #000000;
+    color: var(--black);
     text-decoration: none;
 }
 .git-link {
@@ -216,12 +217,13 @@ FOOTER
 DARK THEME
 ================================================ */
 .dark-theme {
-    background: #000;
+    background: var(--black);
     color: #ddd;
 }
 #dark-light-btn {
     display: flex;
     gap: 0.2rem;
+    color: var(--black);
 }
 
 /*
